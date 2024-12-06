@@ -55,3 +55,14 @@ def test_validate_tiles():
 
     valid, perfect = validate_tiles(string2tile("dwwggr"), string2tile("dcwrog"))
     assert valid and perfect == (True, True, True, False, None, False)
+
+
+def test_validate_tiles2():
+    valid, perfect = validate_tiles(string2tile("gggggw"), string2tile("dddddw"))
+    print(valid, perfect)
+    valid, perfect = validate_tiles(string2tile("gggggw"), string2tile("ddddwd"))
+    print(valid, perfect)
+    valid, perfect = validate_tiles(string2tile("gggggw"), string2tile("dddwdd"))
+    print(valid, perfect)
+
+test_validate_tiles2()
